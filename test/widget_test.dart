@@ -8,7 +8,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+<<<<<<< HEAD
 import 'package:ubbi_auth_app/main.dart';
+=======
+import 'package:videoapp/main.dart';
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

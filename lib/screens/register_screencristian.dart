@@ -18,33 +18,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   Future<void> _register() async {
     if (_formKey.currentState?.validate() != true) return;
-<<<<<<< HEAD
-=======
 
->>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
     final ok = await _authService.register(
       _usernameController.text,
       _passwordController.text,
     );
-<<<<<<< HEAD
-    if (ok) {
-      setState(() {
-        _success = 'Registro exitoso. Ahora puedes iniciar sesión.';
-=======
 
     if (ok) {
       setState(() {
         _success = '✅ Registro exitoso. Ahora puedes iniciar sesión.';
->>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
         _error = null;
       });
     } else {
       setState(() {
-<<<<<<< HEAD
-        _error = 'No se pudo registrar. El usuario puede existir.';
-=======
         _error = '❌ No se pudo registrar. El usuario puede existir.';
->>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
         _success = null;
       });
     }
@@ -53,47 +40,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
-      appBar: AppBar(title: const Text('Registro')),
-      body: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextFormField(
-                controller: _usernameController,
-                decoration: const InputDecoration(labelText: 'Usuario'),
-                validator: (v) => v == null || v.isEmpty ? 'Campo requerido' : null,
-              ),
-              TextFormField(
-                controller: _passwordController,
-                decoration: const InputDecoration(labelText: 'Contraseña'),
-                obscureText: true,
-                validator: (v) => v == null || v.isEmpty ? 'Campo requerido' : null,
-              ),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: _register,
-                child: const Text('Registrarse'),
-              ),
-              TextButton(
-                onPressed: () => Navigator.pushNamed(context, '/login'),
-                child: const Text('¿Ya tienes cuenta? Inicia sesión'),
-              ),
-              if (_error != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 16),
-                  child: Text(_error!, style: const TextStyle(color: Colors.red)),
-                ),
-              if (_success != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 16),
-                  child: Text(_success!, style: const TextStyle(color: Colors.green)),
-                ),
-            ],
-=======
       // Fondo con gradiente
       body: Container(
         decoration: BoxDecoration(
@@ -251,14 +197,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ],
               ),
             ),
->>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
           ),
         ),
       ),
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d

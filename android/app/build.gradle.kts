@@ -6,7 +6,11 @@ plugins {
 }
 
 android {
+<<<<<<< HEAD
     namespace = "com.example.ubbi_auth_app"
+=======
+    namespace = "com.example.videoapp"
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +25,11 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+<<<<<<< HEAD
         applicationId = "com.example.ubbi_auth_app"
+=======
+        applicationId = "com.example.videoapp"
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion

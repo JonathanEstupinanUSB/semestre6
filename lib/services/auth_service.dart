@@ -39,4 +39,8 @@ class AuthService {
   Future<void> logout() async {
     await _storage.delete(key: 'jwt');
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d

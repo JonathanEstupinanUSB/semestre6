@@ -1,6 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<<<<<<< HEAD
     <application
         android:label="ubbi_auth_app"
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:label="videoapp"
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

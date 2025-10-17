@@ -5,15 +5,24 @@ import 'screens/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+<<<<<<< HEAD
   runApp(const UbiApp());
 }
 
 class UbiApp extends StatelessWidget {
   const UbiApp({super.key});
+=======
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+<<<<<<< HEAD
       title: 'UBI APP',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -161,6 +170,18 @@ class _AnimatedBackgroundState extends State<AnimatedBackground>
           ),
           child: widget.child,
         );
+=======
+      title: 'Autenticación Biométrica',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const LoginScreen(),
+        '/register': (context) => const RegisterScreen(),
+        '/home': (context) => const HomeScreen(),
+>>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
       },
     );
   }
