@@ -1,85 +1,51 @@
-<<<<<<< HEAD
-# ubbi_auth_app
+th_app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
-# VideoApp
-
-Aplicación Flutter con autenticación biométrica y almacenamiento seguro de token JWT.
-
-## Descripción
-
-Este proyecto es una app Flutter que permite:
-- Registro de usuario (usuario y contraseña) contra una API Flask.
-- Login de usuario con autenticación biométrica (huella, rostro, etc.) en Android.
-- Almacenamiento seguro del token JWT usando `flutter_secure_storage`.
-- Pantalla principal que muestra un mensaje y el token JWT si el usuario está autenticado.
-
-## Estructura de vistas
-
-- **Login** (`/login`):
-  - Formulario para usuario y contraseña.
-  - Al iniciar sesión, solicita autenticación biométrica.
-  - Si es exitosa, almacena el JWT y navega a la pantalla principal.
-
-- **Registro** (`/register`):
-  - Formulario para crear un nuevo usuario.
-  - Permite registrar usuario y contraseña en la API.
-
-- **Home** (`/home`):
-  - Muestra mensaje de bienvenida si el usuario está autenticado.
-  - Muestra el token JWT almacenado.
-  - Permite cerrar sesión (elimina el JWT).
-
-## Almacenamiento del token JWT
-
-El token JWT se almacena de forma segura en el dispositivo usando el paquete [`flutter_secure_storage`](https://pub.dev/packages/flutter_secure_storage). Esto garantiza que el token no sea accesible por otras apps y se protege con mecanismos del sistema operativo.
-
-## Autenticación biométrica
-
-La app utiliza el paquete [`local_auth`](https://pub.dev/packages/local_auth) para solicitar autenticación biométrica (huella, rostro, etc.) antes de acceder a la pantalla principal.
-
-## API utilizada
-
-La app se conecta a la API Flask:
-[https://flaskapiexample-production.up.railway.app/](https://flaskapiexample-production.up.railway.app/)
-
-- **Registro:** `POST /users/register`
-- **Login:** `POST /users/login`
-- **Listado de usuarios:** `GET /users/` (requiere JWT)
-
-
-<img width="1071" height="681" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/d7143677-2ed9-4877-b80b-8dbc8c246867" />
-
-## Requisitos
-
-- Flutter 3.x
-- Android: la actividad principal debe extender de `FlutterFragmentActivity` para soportar biometría.
-
-## Instalación y ejecución
-
-1. Clona el repositorio.
-2. Ejecuta `flutter pub get` para instalar dependencias.
-3. Ejecuta en Android:
-   ```sh
-   flutter run
-   ```
-
-## Notas
-- El token JWT se elimina al cerrar sesión.
-- Si la autenticación biométrica falla, el usuario no accede a la pantalla principal.
-- El almacenamiento seguro solo está disponible en dispositivos reales (no en emuladores sin soporte biométrico).
->>>>>>> 41589dfd9180ae942b281e01137f87b185f66e1d
+UBI APP
+Aplicacion movil desarrollada en Flutter, orientada a ofrecer una experiencia moderna, segura y dinamica.
+Integra autenticacion de usuarios (tradicional y biometrica), almacenamiento seguro de tokens JWT y conexion con una API Flask.
+Disenada con un estilo visual limpio y profesional en tonos azul oscuro y naranja, inspirados en la innovacion tecnologica aplicada al agro colombiano.
+________________________________________
+- Descripcion general
+UBI APP es una aplicacion movil Flutter que permite:
+- Registro e inicio de sesion de usuarios mediante credenciales (usuario y contrasena).
+- Almacenamiento del token JWT de sesion usando flutter_secure_storage.
+- Comunicacion con una API Flask REST para validar credenciales y gestionar usuarios.
+- Interfaz moderna con fondo animado y diseno limpio, pensada para escalabilidad.
+________________________________________
+- Estructura de vistas
+Pantalla    Ruta    Descripcion
+Login   /login  Formulario de inicio de sesion. Solicita credenciales y valida con la API. Incluye autenticacion biometrica si esta disponible.
+Registro    /register   Permite crear nuevos usuarios mediante API Flask.
+Home    /home   Muestra mensaje de bienvenida, el token JWT almacenado y opcion de cerrar sesion.
+________________________________________
+-Seguridad y autenticacion
+-Token JWT seguro
+El token recibido desde la API Flask se almacena en el dispositivo con flutter_secure_storage, garantizando que otras aplicaciones no puedan acceder a el.
+________________________________________
+API utilizada
+La app se conecta a la API Flask alojada en Railway:
+Base URL:
+https://flaskapiexample-production.up.railway.app/
+Endpoint    Metodo  Descripcion
+/users/register POST    Registrar nuevo usuario
+/users/login    POST    Iniciar sesion y obtener token JWT
+/users/ GET Obtener listado de usuarios (requiere JWT)
+________________________________________
+Ejecucion del proyecto
+Requisitos previos
+-   Flutter SDK 3.10 o superior
+-   Android Studio o Visual Studio Code
+-   Dispositivo fisico o emulador con soporte biometrico
+Instalacion
+git clone https://github.com/tuusuario/ubi_app.git
+cd ubi_app
+flutter pub get
+flutter run
+________________________________________
+ Compatibilidad
+    Android: Requiere que la actividad principal extienda de FlutterFragmentActivity.
+________________________________________
+Autor
+UBI APP  Proyecto Flutter de autenticacion segura y diseno moderno
+Desarrollado por [Proyecto integrador UBI-APP]
+Enfocado en soluciones digitales para el agro colombiano.
